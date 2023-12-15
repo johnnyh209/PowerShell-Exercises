@@ -119,6 +119,7 @@ Why is a text file?`
 
 2. What happens if you run `Get-Command | Export-CSV commands.CSV | Out-File` from the console? Why does that happen?
 - Running that command gives an error. This is because for the `Out-File` command, the user is required to provide a name for the file that is to be created. Furthermore, having `Out-File` in the command above is redundant because we are already creating a CSV file using the `Export-CSV` command.
+
 ![Question2](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/39bcde3f-d128-4362-a2b3-9b3d6756c4c7)
 
 3. Apart from getting one or more jobs and piping them to `Stop-Job`, what other means does `Stop-Job` provide for you to specify the job or jobs you want to stop? Is is possible to stop a job without using `Get-Job` at all?
@@ -130,3 +131,9 @@ Why is a text file?`
 5. How do you include the type information in the # comment line at the top of an exported CSV file?
 - You would use the -IncludeTypeInformation parameter.
 
+6. `Export-Clixml` and `Export-CSV` both modify the system because they can create and overwrite files. What parameter would prevent them from overwriting an existing file? What parameter would ask whether you were sure before proceeding to write the output file?
+- To prevent the overwriting of an existing file, use the `-NoClobber` parameter.
+- To ask whether you were sure before proceeding to write the output file, use the `-Confirm` parameter.
+
+7. The operating system maintains several regional settings, which include a default list separator. On US systems, that separator is a comma. How can you tell `Export-CSV` to use the system's default separator rather than a comma?
+- You can use the `-UseCulture` parameter to use the system's default separator.
