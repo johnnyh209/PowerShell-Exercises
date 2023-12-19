@@ -167,3 +167,14 @@ Why is a text file?`
 ![Screenshot 2023-12-19 124928](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/499c3e8e-1bae-40d5-8d80-e47b0bf46a72)
 
 6. Use `Compress-Archive` to create a zip of the contents of ~/TestFolder, and name the archive `TestFolder.zip`.
+- Since I changed the directory to the TestFolder earlier, I need to go back to the previous directory. From there, I compressed `TestFolder` into a zip file.
+![Screenshot 2023-12-19 162335](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/503f85ee-9ed0-4ef6-aa2a-e40e737f27d3)
+
+7. Expand the archive to ~/TestFolder2
+![Screenshot 2023-12-19 162628](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/cdc13337-e66d-4df7-bcdc-86c13fb09448)
+![Screenshot 2023-12-19 162712](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/8f600818-093b-441d-b75f-61335ec12499)
+
+8. Use the `Compare-Object` and `Select-Object -ExandProperty Name` to compare just the names of the files in the folders to verify you have the same files.
+- $Reference = Get-ChildItem .\TestFolder | Select-Object -ExpandProperty -name
+- $Destination = Get-ChildItem .\TestFolder2 | Select-Object -ExpandProperty -name
+- Compare-Object -ReferenceObject ($Reference) -DifferenceObject ($Destination
