@@ -174,7 +174,6 @@ Why is a text file?`
 ![Screenshot 2023-12-19 162628](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/cdc13337-e66d-4df7-bcdc-86c13fb09448)
 ![Screenshot 2023-12-19 162712](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/8f600818-093b-441d-b75f-61335ec12499)
 
-8. Use the `Compare-Object` and `Select-Object -ExandProperty Name` to compare just the names of the files in the folders to verify you have the same files.
-- $Reference = Get-ChildItem .\TestFolder | Select-Object -ExpandProperty -name
-- $Destination = Get-ChildItem .\TestFolder2 | Select-Object -ExpandProperty -name
-- Compare-Object -ReferenceObject ($Reference) -DifferenceObject ($Destination
+8. Use the `Compare-Object` and `Select-Object -ExpandProperty Name` to compare just the names of the files in the folders to verify you have the same files.
+![Screenshot 2023-12-19 201936](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/239a49a7-1f54-43c1-a7b9-d846f8ccbf43)
+
