@@ -182,7 +182,7 @@ Why is a text file?`
 1. Identify a cmdlet that produces a random number.
 ![Screenshot 2023-12-22 151204](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/6212999e-4bef-4b0c-b7e3-ae37e9ea1fa1)
 
-2.Identify the cmdlet that displays the current date and time
+2. Identify the cmdlet that displays the current date and time
 ![Screenshot 2023-12-22 152616](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/7eddc253-86b5-441d-a942-b75101c3112f)
 
 3. What type of object does the cmdlet from task 2 produce? (What is the *TypeName* of the object produced by the cmdlet?)
