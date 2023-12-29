@@ -256,3 +256,9 @@ The PowerShell team has recently been working on a module called Secrets Managem
 
 5. Write a command that uses pipeline parameter binding to retrieve the first subscriptioin and set that in the Azure context. Don't use pipeline input; instead, use a parenthetical command.
 - Select-AzSubscription -SelectionObject (Get-AzSubscription | Select-Object -First 1)
+
+6. Sometimes someone forgets to add a pipeline parameter binding to a cmdlet. For example, would the following command work to set the subscription in the Azure context?
+  `mySubscriptionName | Select-AzSubscription`
+- The above command will not work. If you look at the help for `Select-AzSubscription` you will see that the `-Subscription` parameter does not support/accept pipeline input.
+![Screenshot 2023-12-29 153246](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/62baa4c0-fd10-4996-b153-93e3efeb842b)
+
