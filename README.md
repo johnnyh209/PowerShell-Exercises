@@ -235,3 +235,14 @@ The PowerShell team has recently been working on a module called Secrets Managem
 
 * To retrieve the secret I just put into the vault, I used the `Get-Secret` command.
 ![Screenshot 2023-12-26 173611](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/04a09fe4-e9ba-4c39-bc06-a979129003c1)
+
+# 10.9 Lab
+
+1. Would the following command work to retrieve a list of commands from modules that star with Microsoft.* on the current machine? Why or why not? Write an explanation, similar to the ones we provided earlier in this chapter.
+   ` Get-Command -Module (Get-Module -ListAvailable -Name Microsoft.* | Select-Object -ExpandProperty name)`
+- This command should work. Starting within the parenthesis, the `Get-Module` command will return a list of modules (found in the PSModulePath) using the `-ListAvailable` parameter with names starting with Microsoft. using the `-Name` parameter. What is returned is then piped into `Select-Object` with the `-ExpandProperty` parameter with the value `name` assigned to it. This should then return the names of the modules from the list created by `Get-Module`. What we then effectively get is `Get-Command -Module [Array of the names of modules with that starts with Microsoft.]` and the `-Module` parameter "specifies an array of modules" according to Microsoft's documentation.
+
+2. Would this alternative command work to retrieve the list of commands from the same modules? Why or why not? Write an explanation, similar to the ones we provided earlier in this chapter.
+   `Get-Module -ListAvailable -Name Microsoft.* | Get-Command
+- This will not work because the values by `Get-Module` does not make sense to `Get-Command`.
+![Screenshot 2023-12-29 114104](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/a380e53c-f903-4a5d-8ba0-5f288c10529d)
