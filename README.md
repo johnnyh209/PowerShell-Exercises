@@ -246,3 +246,13 @@ The PowerShell team has recently been working on a module called Secrets Managem
    `Get-Module -ListAvailable -Name Microsoft.* | Get-Command
 - This will not work because the values by `Get-Module` does not make sense to `Get-Command`.
 ![Screenshot 2023-12-29 114104](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/a380e53c-f903-4a5d-8ba0-5f288c10529d)
+
+3. Would this set the subscription in the Azure context? Consider if `Get-AzSubscription` retrieves multiple subscriptions.
+   `Get-AzSubscription | Select-AzSubscription`
+- The given command will set the subscription. If Get-AzSubscription returns multiple subscriptions and the user does not specify one for Select-AzSubscription using the `-SubscriptionName` parameter, the last subscription on the list will be the one that is set.
+
+4. Write a command that uses pipeline parameter binding to retrieve the first subscription and set that in the Azure context. Don't use parentheses.
+- Get-AzSubscription | Select-Object -First 1 | Select-AzSubscription
+
+5. Write a command that uses pipeline parameter binding to retrieve the first subscriptioin and set that in the Azure context. Don't use pipeline input; instead, use a parenthetical command.
+- Select-AzSubscription -SelectionObject (Get-AzSubscription | Select-Object -First 1)
