@@ -352,6 +352,7 @@ The PowerShell team has recently been working on a module called Secrets Managem
 **Disclaimer:** Using VirtualBox, I was unable to get WinRM to work. While successfully enabling WinRM, anytime I try to use `Enter-PSSession`, an error is always returned. Thus for this, I chose to do everything locally because the concept is still the same. Though, I will provide a command that does fulfill what the question asks.
 
 1. Create a background job that gets all processes that start with `pwsh` from two computers.
+
 `Invoke-Command -ComputerName name1,name2 -ScriptBlock {Get-Process -Name pwsh} -asjob`
 ![7L3SDzjVDP](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/0793b78e-9ada-46cb-9301-dfec3444a6b4)
 
