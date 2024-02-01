@@ -1,9 +1,9 @@
 # 13.11 Lab 
 
-1. make a one-to-one connection with a remote compuer (or with `localhost` if you have only one computer). Launch your favorite text editor. What happens?<br>
+1. Make a one-to-one connection with a remote computer (or with `localhost` if you have only one computer). Launch your favorite text editor. What happens?<br>
 ![Question 1](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/8994ebb7-d4e7-4062-a30d-babbfbd37623)
 
-2. Using `Invoke-ScriptBlock`, retrieve a list of processes currently running from one or two remote computers (it's only to use `localhost` twice if you have only one computer). Format the results as a wide list.<br>
+2. Using `Invoke-ScriptBlock`, retrieve a list of processes currently running from one or two remote computers (it's okay to use `localhost` twice if you have only one computer). Format the results as a wide list.<br>
 ![Question 2](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/de457353-b895-448c-9dc4-e15b55c11efe)
 
 3. Use `Invoke-ScriptBlock` to get a list of the top 10 processes for virtual memory (VM) usage. Target one or two remote computers, if you can; if you have only one computer, target `localhost` twice.<br>
