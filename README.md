@@ -241,7 +241,7 @@ The PowerShell team has recently been working on a module called Secrets Managem
 
 1. Would the following command work to retrieve a list of commands from modules that star with Microsoft.* on the current machine? Why or why not? Write an explanation, similar to the ones we provided earlier in this chapter.
    ` Get-Command -Module (Get-Module -ListAvailable -Name Microsoft.* | Select-Object -ExpandProperty name)`
-- This command should work. Starting within the parenthesis, the `Get-Module` command will return a list of modules (found in the PSModulePath) using the `-ListAvailable` parameter with names starting with Microsoft. using the `-Name` parameter. What is returned is then piped into `Select-Object` with the `-ExpandProperty` parameter with the value `name` assigned to it. This should then return the names of the modules from the list created by `Get-Module`. What we then effectively get is `Get-Command -Module [Array of the names of modules with that starts with Microsoft.]` and the `-Module` parameter "specifies an array of modules" according to Microsoft's documentation.
+- This command should work. Starting within the parenthesis, the `Get-Module` command will return a list of modules (found in the PSModulePath) using the `-ListAvailable` parameter with names starting with Microsoft using the `-Name` parameter. What is returned is then piped into `Select-Object` with the `-ExpandProperty` parameter with the value `name` assigned to it. This should then return the names of the modules from the list created by `Get-Module`. What we then effectively get is `Get-Command -Module [Array of the names of modules with that starts with Microsoft.]` and the `-Module` parameter "specifies an array of modules" according to Microsoft's documentation.
 
 2. Would this alternative command work to retrieve the list of commands from the same modules? Why or why not? Write an explanation, similar to the ones we provided earlier in this chapter.
    `Get-Module -ListAvailable -Name Microsoft.* | Get-Command
@@ -255,7 +255,7 @@ The PowerShell team has recently been working on a module called Secrets Managem
 4. Write a command that uses pipeline parameter binding to retrieve the first subscription and set that in the Azure context. Don't use parentheses.
 - Get-AzSubscription | Select-Object -First 1 | Select-AzSubscription
 
-5. Write a command that uses pipeline parameter binding to retrieve the first subscriptioin and set that in the Azure context. Don't use pipeline input; instead, use a parenthetical command.
+5. Write a command that uses pipeline parameter binding to retrieve the first subscription and set that in the Azure context. Don't use pipeline input; instead, use a parenthetical command.
 - Select-AzSubscription -SelectionObject (Get-AzSubscription | Select-Object -First 1)
 
 6. Sometimes someone forgets to add a pipeline parameter binding to a cmdlet. For example, would the following command work to set the subscription in the Azure context?
@@ -263,25 +263,6 @@ The PowerShell team has recently been working on a module called Secrets Managem
 - The above command will not work. If you look at the help for `Select-AzSubscription` you will see that the `-Subscription` parameter does not support/accept pipeline input.
 ![Screenshot 2023-12-29 153246](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/62baa4c0-fd10-4996-b153-93e3efeb842b)
 
-# 11.10 Lab
-
-1. Display a table of processes that includes only the process names, IDs, and whether they're responding to Windows (the `Responding` property has that information). Have the table take up as little horizontal room, but don't allow any information to be truncated.
-![Screenshot 2024-01-03 143319](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/e153b1e0-9710-412e-968e-d79847f415b8)
-
-2. Display a table of processes that includes the process names and IDs. Also inlcude columns for virtual and physical memory usage expressing thosde values in megabytes (MB).
-![Screenshot 2024-01-03 143826](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/92a684be-1262-48da-8f2a-40927f2e42ce)
-
-3. Use `Get-Module` to get a list of loaded modules. Format the output as a table that includes, in this order, the module name and the version. The column headers must be `ModuleName` and `ModuleVersion`.
-![Screenshot 2024-01-03 145106](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/b71e79af-f865-442f-bfff-1502c1a17fca)
-
-4. Use `Get-AzStorageAcount` and `Get-AzStorageContainer` to display *all* of your storage containers so that a separate table is displayed for storage containers that are accessible to the publi and storage containers that are not.
-- Get-AzStorageAccount | Get-AzStorageContainer | Format-Table -GroupBy PublicAccess
-
-5. Display a four-column-wide list of all directories in the home directory.
-![Screenshot 2024-01-03 145737](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/07a9a6fc-e782-4bb0-a2bb-f2dfd5a682fe)
-
-6. Create a formatted list of all .dll files in `$pshome`, displaying the name, version information, and file size. Powershell uses the `Length` preoperty, but to make it clearer, your output should show `Size`.
-![Screenshot 2024-01-03 181552](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/55e15396-83a0-4686-8fa2-37e0d110afb9)
 
 
 
