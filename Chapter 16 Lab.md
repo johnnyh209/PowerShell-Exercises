@@ -20,7 +20,7 @@
 ![vNnmoJlbC3](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/6862b3e3-3b50-4185-97f3-b94abb21ba74)
 
 6. Replace `$services` with just the bits and print spooler service. + 7. Display the contents of `$services`.<br>
-**Disclaimer:** `-ErrorAction SilentlyContinue` was needed because running `Get-Service` returned errors because it was not able to query a handful of services.
+**Disclaimer:** `-ErrorAction SilentlyContinue` was needed because running `Get-Service` returned errors because it was not able to query a handful of services.<br>
 ![wSCEpyMiJs](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/472ab280-4d5e-4607-8091-f6f533ff43cc)
 
 8. Export `$services` to a CSV file.<br>
