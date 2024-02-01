@@ -375,3 +375,17 @@ The PowerShell team has recently been working on a module called Secrets Managem
 
 8. Export `$services` to a CSV file.
 ![gGFM3spFg9](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/355453a0-4bae-4ea2-b6c9-e8c2cb8d6316)
+
+# 17.6 Lab
+
+1. Use `Write-Output` to display the result of 100 multiplied by 10.
+![YigOSJ3ohE](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/9ad3d030-0de4-46e9-b902-ad52d53467ea)
+
+2. Use `Write-Host` to display the result of 100 multiplied by 10.
+![BXLOQHlkqx](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/096b5f2c-a1c6-41e6-a8f3-da6955b01968)
+
+3. Prompt the user to enter a name, and then display that name in yellow text.
+![BREhsqILtu](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/fbfbc2cf-ac88-4d5f-9776-27f64ec0e10d)
+
+4. Prompt the user to enter a name, and then display that name only if it's longer than five characters. Do this all with a single PowerShell expression---don't use a variable.
+![veVX9i2CEE](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/984e12bc-cad5-409a-be20-5e485d1d1d88)
