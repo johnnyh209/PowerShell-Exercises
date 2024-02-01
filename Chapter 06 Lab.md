@@ -3,14 +3,18 @@
 1. Create two similar, but different, text files. Try comparing them by using `Compare-Object`. Run something like this: `Compare-Object -Reference (Get-Content File1.txt) -Different (Get-Content File2.txt)`.
 
 Contents of File 1:
-`This is a text file.<br>
-What is a text file?<br>
-Why is a text file?`
+<blockquote>
+This is a text file.
+What is a text file?
+Why is a text file?
+</blockquote>
 
 Contents of File 2:
-`This is a text file.<br>
-Where is a text file?<br>
-Why is a text file?`
+<blockquote>
+This is a text file.
+Where is a text file?
+Why is a text file?
+</blockquote>
 
 ![Screenshot 2023-12-15 160712](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/fe8f48d0-696b-47e1-8ed7-2657082191b8)
 
