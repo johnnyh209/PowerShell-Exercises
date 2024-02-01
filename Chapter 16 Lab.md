@@ -10,7 +10,7 @@
 2. When the job finishes running, receive the results of the job into a variable.<br>
 ![zwIzRR1LGB](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/c43097fd-0664-4918-a37b-dee3fca2cfcd)
 
-3.  Display the contents of that variable.
+3.  Display the contents of that variable.<br>
 ![kv7PMFmubb](https://github.com/johnnyh209/PowerShell-Exercises/assets/33064730/2e8f4442-2633-4939-a3dd-0f4da6ed1afb)
 
 4.  Export the variable's contents to a CLIXML file.
